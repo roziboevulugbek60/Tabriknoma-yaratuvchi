@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabriknoma Yarat uzuvchi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <header class="header">
+    <div class="logo">💌 TABRIKNOMA</div>
+    <p>Eng chiroyli tilaklar shu yerdan boshlanadi!</p>
+  </header>
+
+  <main class="container">
+    <section class="editor">
+      <h2>🎨 Tabriknomani yaratish</h2>
+
+      <label for="type">Tabriknoma turini tanlang</label>
+      <select id="type">
+        <option value="birthday">🎂 Tug‘ilgan kun</option>
+        <option value="mother">💐 Onajon va yaqinlar</option>
+        <option value="wedding">💍 To‘y tabriknomasi</option>
+        <option value="holiday">🎉 Bayram tabriknomasi</option>
+      </select>
+
+      <label for="name">Kimga atalgan?</label>
+      <input id="name" type="text" placeholder="Masalan: Aziz onajonim">
+
+      <label for="message">Tabrik matni</label>
+      <textarea id="message" rows="5" placeholder="Chiroyli tilaklaringizni yozing..."></textarea>
+
+      <label for="color">Dizayn rangini tanlang</label>
+      <div class="color-row">
+        <button class="color-choice active" data-color="#8b5cf6" style="--c:#8b5cf6" aria-label="Binafsha"></button>
+        <button class="color-choice" data-color="#ec4899" style="--c:#ec4899" aria-label="Pushti"></button>
+        <button class="color-choice" data-color="#0ea5e9" style="--c:#0ea5e9" aria-label="Ko‘k"></button>
+        <button class="color-choice" data-color="#16a34a" style="--c:#16a34a" aria-label="Yashil"></button>
+        <button class="color-choice" data-color="#d97706" style="--c:#d97706" aria-label="Oltin"></button>
+      </div>
+
+      <label for="customColor">Yoki o‘zingiz rang tanlang</label>
+      <input type="color" id="customColor" value="#8b5cf6">
+
+      <label for="styleSelect">Bezak uslubi</label>
+      <select id="styleSelect">
+        <option value="stars">✨ Yulduzchalar</option>
+        <option value="hearts">💖 Yurakchalar</option>
+        <option value="flowers">🌸 Gullar</option>
+        <option value="confetti">🎊 Bayram bezaklari</option>
+      </select>
+
+      <button id="updateBtn" class="main-btn">✨ Tabriknomani yangilash</button>
+      <button id="downloadBtn" class="download-btn">📥 PNG rasmni yuklab olish</button>
+    </section>
+
+    <section class="preview-section">
+      <h2>🌟 Tabriknomangiz</h2>
+      <div class="preview-frame">
+        <canvas id="cardCanvas" width="1000" height="700"></canvas>
+      </div>
+      <p class="preview-note">Tabriknomangizni ko‘rib, PNG formatida yuklab olishingiz mumkin.</p>
+    </section>
+  </main>
+
+  <footer>Yaratildi: <strong>Ulug'bek.R</strong></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
